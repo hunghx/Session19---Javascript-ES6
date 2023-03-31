@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // ECMAScript 6 
+
+        // let và const 
+        // block {}
+        var i = 2; // định nghĩa 1 biến toàn cục 
+        let j = 2; // định nghĩa 1 biến cục bộ
+
+        j = 4;
+        i = 4;
+        if (true) {
+            var a = "biến này khai báo bằng var";
+            var a = 2;
+            let b = "biến này được khai báo bằng let";
+        }
+        console.log(a);
+        // console.log(b);
+        const J = 2;
+
+        // 
+        function add(a, b = 3) {
+            console.log("tổng 2 số là " + (a + b));
+        }
+        //gọi hàm
+        add(1, 5)
+        // hiển thị danh sách các phần tử truyền vào
+        function display(number1, number2, ...parameters) {
+            console.log(number1);
+            console.log(number2);
+            console.log(parameters);
+        }
+        // display(1, 2, 3, 4, 5)
+        // Spread ...
+        let arr = [3, 4, 5];
+        console.log(arr);
+        console.log(...arr);
+        let newArr = [1, 2, ...arr, 6, 7, 8]
+        console.log(newArr);
+
+        let obj = {
+            id: 1,
+            name: "hùng",
+            age: 22
+        }
+        let newObj = { ...obj, name: "nam", class: "JV01" }
+        console.log(newObj);
+        // destructuring
+
+        let { name, id, age } = obj;
+        console.log(name);
+        console.log(id);
+        console.log(age);
+
+        // arrow function;
+        const minus = (a, b) => {
+            // statements
+            return a - b
+        }
+
+        // Class
+
+    </script>
+    <script src="main.js"></script>
+</body>
+
+</html>
